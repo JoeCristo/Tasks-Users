@@ -1,0 +1,7 @@
+netelip_user:
+    resource: "@NetelipUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

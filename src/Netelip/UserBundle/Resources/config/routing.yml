@@ -1,0 +1,24 @@
+netelip_user_user:
+    resource:  "@NetelipUserBundle/Resources/config/routes/user.yml"
+    prefix:    /user
+
+netelip_task_task:
+    resource:  "@NetelipUserBundle/Resources/config/routes/task.yml"
+    prefix:    /task
+
+# Autentication
+
+netelip_user_homepage:
+    path:     /
+    defaults: { _controller: NetelipUserBundle:User:home }
+
+netelip_user_login:
+    path:     /login
+    defaults: { _controller: NetelipUserBundle:Security:login }
+
+netelip_user_login_check:
+    path:     /login_check
+    defaults: { _controller: NetelipUserBundle:Security:loginCheck }
+
+netelip_user_logout:
+    path:     /logout

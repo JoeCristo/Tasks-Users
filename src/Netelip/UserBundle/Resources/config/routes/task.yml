@@ -1,0 +1,53 @@
+netelip_task_index:
+    path:     /index
+    defaults: { _controller: NetelipUserBundle:Task:index }
+
+netelip_task_add:
+    path:     /add
+    defaults: { _controller: NetelipUserBundle:Task:add }
+
+netelip_task_create:
+    path:     /create
+    defaults: { _controller: NetelipUserBundle:Task:create }
+    methods:  POST
+
+netelip_task_edit:
+    path:     /edit/{id}
+    defaults: { _controller: NetelipUserBundle:Task:edit }
+
+netelip_task_update:
+    path:     /update/{id}
+    defaults: { _controller: NetelipUserBundle:Task:update }
+    methods:  [POST, PUT]
+
+netelip_task_view:
+    path:     /view/{id}
+    defaults: { _controller: NetelipUserBundle:Task:view }
+
+netelip_task_delete:
+    path:     /delete/{id}
+    defaults: { _controller: NetelipUserBundle:Task:delete }
+    methods:  [POST, DELETE]
+
+netelip_task_redirect_add:
+    path: /create
+    defaults:
+        _controller: NetelipUserBundle:Task:add
+        path: /add
+        permanent: true
+
+netelip_task_custom:
+    path:     /custom
+    defaults: { _controller: NetelipUserBundle:Task:custom }
+
+netelip_task_process:
+    path:     /process/{id}
+    defaults: { _controller: NetelipUserBundle:Task:process }
+    methods:  [POST, PUT]
+
+netelip_task_redirect_edit:
+    path: /update/{id}
+    defaults:
+        _controller: NetelipUserBundle:Task:edit
+        path: /edit/{id}
+        permanent: true
